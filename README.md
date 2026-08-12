@@ -8,6 +8,11 @@ Fit Plate is a modern Android application designed to help users discover health
 
 ![Fit Plate Screens](screens.png)
 
+### 🎥 Demo Video
+<div align="center">
+  <video src="demo.mp4" width="400" controls></video>
+</div>
+
 ## 🚀 Features
 
 - **Recipe Discovery**: Browse and search through thousands of recipes via the Spoonacular API.
