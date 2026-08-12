@@ -1,6 +1,12 @@
 # Fit Plate 🥗
 
+![Fit Plate Banner](banner.png)
+
 Fit Plate is a modern Android application designed to help users discover healthy recipes, manage their nutrition, and interact with an AI-powered Sous Chef for personalized cooking guidance.
+
+## 📱 Product Overview
+
+![Fit Plate Screens](screens.png)
 
 ## 🚀 Features
 
