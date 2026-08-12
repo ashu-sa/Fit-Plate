@@ -1,12 +1,19 @@
+```markdown
 # Fit Plate 🥗
 
-![Fit Plate Banner](banner.png)
+![Fit Plate Banner](Grey Clean Mobile App Presentation.jpg)
 
 Fit Plate is a modern Android application designed to help users discover healthy recipes, manage their nutrition, and interact with an AI-powered Sous Chef for personalized cooking guidance.
 
+## 🎥 App Demo
+
+<video src="Grey Clean Mobile App Presentation.mp4" controls="controls" width="100%">
+  Your browser does not support the video tag.
+</video>
+
 ## 📱 Product Overview
 
-![Fit Plate Screens](screens.png)
+![Fit Plate Screens](Grey Clean Mobile App Presentation-2.jpg)
 
 ## 🚀 Features
 
@@ -35,10 +42,12 @@ To run this project locally, follow these steps:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/fit-plate.git
+git clone [https://github.com/yourusername/fit-plate.git](https://github.com/yourusername/fit-plate.git)
+
 ```
 
 ### 2. Add API Keys
+
 The project uses several APIs that require keys. For security, these are not committed to the repository.
 
 1. Open the project in Android Studio.
@@ -46,18 +55,25 @@ The project uses several APIs that require keys. For security, these are not com
 3. Add the following lines with your own API keys:
 
 ```properties
-# Spoonacular API Key (Get it at: https://spoonacular.com/food-api)
+# Spoonacular API Key (Get it at: [https://spoonacular.com/food-api](https://spoonacular.com/food-api))
 SPOONACULAR_API_KEY=your_spoonacular_key_here
 
-# Groq API Key (Get it at: https://console.groq.com/)
+# Groq API Key (Get it at: [https://console.groq.com/](https://console.groq.com/))
 GROQ_API_KEY=your_groq_key_here
+
 ```
 
 ### 3. Build and Run
-- Sync the project with Gradle files.
-- Run the `app` module on an emulator or a physical device (Android 7.0+ / API 24+).
+
+* Sync the project with Gradle files.
+* Run the `app` module on an emulator or a physical device (Android 7.0+ / API 24+).
 
 ---
 
 ## 🔒 Security Note
+
 This project uses the `secrets-gradle-plugin` to manage API keys. These keys are injected into `BuildConfig` at compile time and are never checked into version control. If you contribute to this project, ensure your `local.properties` is kept private.
+
+```
+
+```
