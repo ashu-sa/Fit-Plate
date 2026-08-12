@@ -1,78 +1,57 @@
-# Android application for showing Tasty recipes
+# Fit Plate 🥗
 
+Fit Plate is a modern Android application designed to help users discover healthy recipes, manage their nutrition, and interact with an AI-powered Sous Chef for personalized cooking guidance.
 
+## 🚀 Features
 
-Tasty App is a fully functional Android app built entirely with Kotlin and Jetpack Compose. This repository serves as an Android project architecture showcase. It follows Android design and development best practices and is intended to be a useful reference for developers. You can read more about this app in [this blog][blog].
+- **Recipe Discovery**: Browse and search through thousands of recipes via the Spoonacular API.
+- **AI Sous Chef**: Get real-time cooking assistance and personalized recipe advice using the Groq API.
+- **Smart Filtering**: Filter recipes by dietary requirements, meal types, and specific tags.
+- **Bookmarking**: Save your favorite recipes for easy access later (stored locally via Room).
+- **Adaptive UI**: Fully responsive design supporting phones, tablets, and foldable devices using Material 3 Adaptive.
 
+## 🛠 Tech Stack
 
-<p>
-    <img src="onboarding_screen.png" width="270" height="606">
-    <img src="recipes_screen.png" width="270" height="606">
-    <img src="recipe_details_screen.png" width="270" height="606">
-</p>
-<p>
-    <img src="tag_filters.png" width="270" height="606">
-    <img src="tasty_app.gif" width="270" height="606">
-    <img src="tags_contextual_flow_row.png" width="270" height="606">
-</p>
-<p>
-    <img src="tasty_tablet_onboarding.png" width="810" height="530">
-</p>
-<div align="center">
-    
-</div>
+- **UI**: [Jetpack Compose](https://developer.android.com/jetpack/compose) (100% Kotlin)
+- **Design System**: [Material 3](https://developer.android.com/jetpack/compose/designsystems/material3) with Adaptive Layouts
+- **Architecture**: MVVM (Model-View-ViewModel) with StateFlow
+- **Dependency Injection**: [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
+- **Networking**: [Retrofit](https://square.github.io/retrofit/) & [Moshi](https://github.com/square/moshi)
+- **Database**: [Room](https://developer.android.com/training/data-storage/room)
+- **Pagination**: [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-paged-data)
+- **Image Loading**: [Coil](https://coil-kt.github.io/coil/)
+- **Async**: Kotlin Coroutines & Flow
+- **AI Integration**: Groq API
 
-## Thanks To
+## ⚙️ Setup & Installation
 
-Repository was initially based on the official [Now in Android App](https://github.com/android/nowinandroid) and it is
-updated to use latest tech stack in Android ecosystem. This project uses free [Tasty API](https://rapidapi.com/apidojo/api/tasty) for fetching the data.
+To run this project locally, follow these steps:
 
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/fit-plate.git
+```
 
-## Features
+### 2. Add API Keys
+The project uses several APIs that require keys. For security, these are not committed to the repository.
 
-App starts with [Onboarding screen](app/src/main/kotlin/com/example/tasty/ui/screen/onboarding/OnboardingScreen.kt), which can be further improved to better explain to a new user all possiblities within the app. Once user finishes with the Onboarding process, he lands on the [screen which shows all currently available recipes](app/src/main/kotlin/com/example/tasty/ui/screen/foryou/ForYouScreen.kt). Recipes are presented with the thumbnail, title and approximate cooking time. User can further explore the recipe by clicking on the [recipe card](app/src/main/kotlin/com/example/tasty/ui/recipe/RecipeCard.kt), which triggers navigation to the [recipe details screen](app/src/main/kotlin/com/example/tasty/ui/screen/recipe/RecipeScreen.kt). On this screen, user can see video tutorial, title, description, recipe keywords and detailed step by step instructions. Additionally, user can bookmark the recipe, to find it easier later on the [Bookmarks screen](app/src/main/kotlin/com/example/tasty/ui/screen/bookmark/BookmarksScreen.kt).
+1. Open the project in Android Studio.
+2. Locate or create a `local.properties` file in the **root directory**.
+3. Add the following lines with your own API keys:
 
-- [Recipe Tag As Filter](https://github.com/stevan-milovanovic/Tasty/pull/2)
-- [Introduce Different Onboarding Layout for Tablet Landscape](https://github.com/stevan-milovanovic/Tasty/pull/3)
+```properties
+# Spoonacular API Key (Get it at: https://spoonacular.com/food-api)
+SPOONACULAR_API_KEY=your_spoonacular_key_here
 
+# Groq API Key (Get it at: https://console.groq.com/)
+GROQ_API_KEY=your_groq_key_here
+```
 
-### Libraries
+### 3. Build and Run
+- Sync the project with Gradle files.
+- Run the `app` module on an emulator or a physical device (Android 7.0+ / API 24+).
 
-* [Jetpack Core][core]
-* [MVVM architectural pattern][mvvm]
-* [Dependency injection with Hilt][hilt]
-* [Jetpack Compose UI][compose]
-* [Room][room] to save data in a local database
-* [Material Design 3][material3]
-* [Downloadable Fonts][fonts]
-* [Retrofit][retrofit] for REST API communication
-* [Moshi][moshi] for parsing JSON into Kotlin classes
-* [Coil][coil] for image loading
-* [Media3 ExoPlayer][exoplayer] for playing video tutorials
-* [Paging3][paging3] for loading and displaying paged data
+---
 
-[paging3]: https://developer.android.com/topic/libraries/architecture/paging/v3-paged-data
-
-[core]: https://developer.android.com/jetpack/androidx/releases/core
-
-[mvvm]: https://developer.android.com/topic/libraries/architecture/viewmodel
-
-[hilt]: https://developer.android.com/training/dependency-injection/hilt-android
-
-[compose]: https://developer.android.com/jetpack/compose
-
-[material3]: https://m3.material.io/develop/android/mdc-android
-
-[fonts]: https://developer.android.com/develop/ui/views/text-and-emoji/downloadable-fonts
-
-[retrofit]: http://square.github.io/retrofit
-
-[moshi]: https://github.com/square/moshi
-
-[coil]: https://coil-kt.github.io/coil/compose
-
-[room]: https://developer.android.com/jetpack/androidx/releases/room
-
-[exoplayer]: https://developer.android.com/media/media3/exoplayer
-
-[blog]: https://www.interventure.info/blog/exploring-tasty-from-idea-to-modern-android-app/
+## 🔒 Security Note
+This project uses the `secrets-gradle-plugin` to manage API keys. These keys are injected into `BuildConfig` at compile time and are never checked into version control. If you contribute to this project, ensure your `local.properties` is kept private.

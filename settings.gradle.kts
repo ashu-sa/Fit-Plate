@@ -13,5 +13,5 @@ dependencyResolutionManagement {
 	}
 }
 
-rootProject.name = "Tasty"
+rootProject.name = "Fit Plate"
 include(":app")

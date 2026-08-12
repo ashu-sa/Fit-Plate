@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<style name="Theme.Tasty" parent="android:Theme.Material.Light.NoActionBar" />
+	<style name="Theme.FitPlate" parent="android:Theme.Material.NoActionBar">
+		<item name="android:windowBackground">@color/background</item>
+		<item name="android:statusBarColor">@color/background</item>
+		<item name="android:navigationBarColor">@color/background</item>
+	</style>
 
-	<style name="Theme.Transparent" parent="@style/Theme.Tasty">
+	<style name="Theme.Transparent" parent="@style/Theme.FitPlate">
 		<item name="android:windowIsTranslucent">true</item>
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>

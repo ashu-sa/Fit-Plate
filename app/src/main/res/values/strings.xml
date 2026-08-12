@@ -1,7 +1,8 @@
 <resources>
-	<string name="app_name">Tasty</string>
-	<string name="feature_for_you_title">For you</string>
+	<string name="app_name">Fit Plate</string>
+	<string name="feature_for_you_title">For You</string>
 	<string name="feature_bookmarks_title">Saved</string>
+	<string name="feature_ai_sous_chef_title">AI Sous Chef</string>
 	<string name="not_connected">⚠️ You aren’t connected to the internet</string>
 	<string name="let_s_join_our_community_to_cook_better_food">Let’s join our community\nto cook better food!</string>
 	<string name="get_started">Get Started</string>
@@ -19,4 +20,13 @@
 	<string name="bookmark_recipe">Bookmark Recipe</string>
 	<string name="how_to_make_it">How to Make It?</string>
 	<string name="show_n_more_items">Show %1$s more</string>
+	<string name="smart_recipes_perfect_macros">Smart recipes. Perfect macros.</string>
+	<string name="fit_plate_with_emoji">Fit Plate 🍽️</string>
+	<string name="energy">Energy</string>
+	<string name="macros">Macros</string>
+	<string name="protein">Protein</string>
+	<string name="carbs">Carbs</string>
+	<string name="fats">Fats</string>
+	<string name="generate_ai_substitutions">Generate AI Substitutions</string>
+	<string name="instructions">Instructions</string>
 </resources>

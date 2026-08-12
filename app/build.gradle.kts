@@ -11,11 +11,11 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace = "com.example.tasty"
+    namespace = "com.example.fitplate"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tasty"
+        applicationId = "com.example.fitplate"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -25,6 +25,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "SPOONACULAR_URL", "\"https://api.spoonacular.com/\"")
     }
 
     buildTypes {
@@ -82,7 +83,6 @@ dependencies {
     //hilt
     val hiltVersion = "2.55"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    annotationProcessor("com.google.dagger:hilt-compiler:$hiltVersion")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
     //coil
@@ -95,14 +95,6 @@ dependencies {
     implementation("androidx.paging:paging-runtime-ktx:$pagingVersion")
     implementation("androidx.paging:paging-compose:$pagingVersion")
     implementation("androidx.room:room-paging:2.6.1")
-
-    //exoplayer
-    val mediaVersion = "1.5.1"
-    implementation("androidx.media3:media3-exoplayer:$mediaVersion")
-    implementation("androidx.media3:media3-ui:$mediaVersion")
-    implementation("androidx.media3:media3-common:$mediaVersion")
-    implementation("androidx.media3:media3-session:$mediaVersion")
-    implementation("androidx.media3:media3-exoplayer-hls:$mediaVersion")
 
     //moshi
     val moshiVersion = "1.15.0"
@@ -125,6 +117,9 @@ dependencies {
 
     //Mock web server
     implementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+
+    // Groq AI (Alternative Free AI)
+    // implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
