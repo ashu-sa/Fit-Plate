@@ -9,9 +9,10 @@ Fit Plate is a modern Android application designed to help users discover health
 ![Fit Plate Screens](screens.png)
 
 ### 🎥 Demo Video
-<div align="center">
-  <video src="demo.mp4" width="400" controls></video>
-</div>
+
+https://github.com/user-attachments/assets/61bc41c0-285a-46fc-8489-06bfe48d6fe8
+
+
 
 ## 🚀 Features
 
